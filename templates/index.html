@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>credit details</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<style>
+body  {
+  background-color: #f1ecec;
+  
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 2px groove;
+}
+</style>
+<body>
+	<body>
+		
+ <div class="predict">
+	<h2 style="margin:auto; width: 35%; padding: 1%; border: 2px solid; text-align: center;">Credit Card Defaulter Prediction</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+		<fieldset style="float:left;height: 390px;">
+			<legend><b>Demographic data:</b></legend>
+			<p><b>Gender:</b></p>
+			<input type="radio" id="male" name="gender" value="1" required="required" />
+			<label for="male">Male</label>
+			<input type="radio" id="female" name="gender" value="2" required="required" />
+			<label for="female">Female</label>
+			<br>
+		
+			<p><b>Education:</b></p>
+			<input type="radio" id="graduate_school" name="education" value="1" required="required"/>
+			<label for="graduate_school">Graduate School</label>
+			<input type="radio" id="university" name="education" value="2" required="required"/>
+			<label for="university">University</label>
+			<input type="radio" id="high_school" name="education" value="3" required="required"/>
+			<label for="high_school">High School</label>
+			<input type="radio" id="others" name="education" value="4" required="required"/>
+			<label for="others">Others</label>
+			<input type="radio" id="unknown" name="education" value="5"required="required"/>
+			<label for="unknown">Unknown</label>
+			<br>
+			<p><b>Marrital Status:</b></p>
+			<input type="radio" id="married" name="marriage" value="1"required="required"/>
+			<label for="married">Married</label>
+			<input type="radio" id="single" name="marriage" value="2" required="required"/>
+			<label for="single">Single</label>
+			<input type="radio" id="others" name="marriage" value="3" required="required"/>
+			<label for="others">Others</label>
+			<br>
+			<br>
+			<label for="age"><b>Age:</b></label>
+			<input type="text" name="age" placeholder="in years" required="required" />
+			<br>
+			<br>
+			<p><b>Limit Balance:</b><br>
+			Amount of given credit in dollar (includes individual and family/supplementary credit)</p>
+			<input type="text" name="limit_bal" placeholder="amount in dollar" required="required" />
+			
+		</fieldset>
+		<fieldset style="height: 390px;">
+			<legend><b>Behavioral data:</b></legend>
+			<div class="repay_status_parent">
+				<p><b>Repayment Status:</b><br>
+				(-1=pay duly, 1=one month delay, 2=two months delay, … 9=delay for nine months and above)</p>						
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="repay_status">April</label><br>
+					<input name="pay_6" id="pay_6" min="-2" max="9" type="number" value="0"  required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="repay_status">May</label><br>
+					<input name="pay_5" id="pay_5" min="-2" max="9" type="number" value="0"  required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="repay_status">June</label><br>
+					<input name="pay_4" id="pay_4" min="-2" max="9" type="number" value="0" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="repay_status">July</label><br>
+					<input name="pay_3" id="pay_3" min="-2" max="9" type="number" value="0" required>
+				</div>
+				<div style="float:left;margin-right: 1.5em;">
+					<label for="repay_status">August</label><br>
+					<input name="pay_2" id="pay_2" min="-2" max="9" type="number" value="0" required>
+				</div>
+				<div style="float:left;">
+					<label for="repay_status">September</label><br>
+					<input name="pay_0" id="pay_0" min="-2" max="9" type="number" value="0" required>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="bill_amount_parent">
+				<p><b>Bill Amounts:</b> Amount of bill statements (in NT dollar)</p>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="bill_amount">April</label><br>
+					<input name="bill_amt6" id="bill_amt6" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="bill_amount">May</label><br>
+					<input name="bill_amt5" id="bill_amt5" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="bill_amount">June</label><br>
+					<input name="bill_amt4" id="bill_amt4" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="bill_amount">July</label><br>
+					<input name="bill_amt3" id="bill_amt3" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left;margin-right: 1.5em;">
+					<label for="bill_amount">August</label><br>
+					<input name="bill_amt2" id="bill_amt2" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left;">
+					<label for="bill_amount">September</label><br>
+					<input name="bill_amt1" id="bill_amt1" value="" placeholder="0" type="text" required>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="previous_payments_parent">
+				<p><b>Previous Payments:</b> Amount of previous payments (in NT dollar)</p>			
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="previous_payments">April</label><br>
+					<input name="pay_amt6" id="pay_amt6" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="previous_payments">May</label><br>
+					<input name="pay_amt5" id="pay_amt5" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="previous_payments">June</label><br>
+					<input name="pay_amt4" id="pay_amt4" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="previous_payments">July</label><br>
+					<input name="pay_amt3" id="pay_amt3" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left; margin-right: 1.5em;">
+					<label for="previous_payments">August</label><br>
+					<input name="pay_amt2" id="pay_amt2" value="" placeholder="0" type="text" required>
+				</div>
+				<div style="float:left;">
+					<label for="previous_payments">September</label><br>
+					<input name="pay_amt1" id="pay_amt1" value="" placeholder="0"  type="text" required>
+				</div>
+			</div>
+		</fieldset>
+		<br>
+		<div style="text-align:center;">
+			<button type="submit" class="btn btn-primary btn-block btn-large"><b>Predict</b></button>
+		</div>
+    </form>
+		<br>
+		
+ </div>
+
+
+
+
+</body>
+</html>
