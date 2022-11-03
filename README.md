@@ -62,7 +62,7 @@ pip install -r requirements.txt
 [<img target="_blank" src="https://jupyter.org/assets/nav_logo.svg" width=150>](https://jupyter.org)
 
 ## Team
-Vamsi Alla: https://github.com/krishnasoft002
+Amrit: https://github.com/krishnasoft002
 
 YouTube Video:
 
