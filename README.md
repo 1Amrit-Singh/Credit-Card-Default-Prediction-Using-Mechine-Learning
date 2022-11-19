@@ -61,16 +61,8 @@ pip install -r requirements.txt
 
 [<img target="_blank" src="https://jupyter.org/assets/nav_logo.svg" width=150>](https://jupyter.org)
 
-## Team
-Amrit: https://github.com/krishnasoft002
 
-YouTube Video:
 
-Backend and UI Exaplanation: 
-https://www.youtube.com/watch?v=fe6UbznGRLU
-
-Heroku Deployment:
-https://www.youtube.com/watch?v=0GaytL89H60
 
 ## Credits
 - The datasets has been provided by [Kaggle](https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset). The original dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) at the UCI Machine Learning Repository. This project wouldn't have been possible without this dataset.
