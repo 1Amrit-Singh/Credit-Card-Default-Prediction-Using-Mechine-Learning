@@ -1,6 +1,6 @@
 # Credit-Card-Default-Prediction-Using-Mechine-Learning
  Internship for Ineuron
-# Heroku Cloud Deployment Application User Interface:
+# AWS Cloud Deployment Application User Interface:
 
 ##  Dataset Overview
 Financial threats are displaying a trend about the credit risk of commercial banks as the  incredible improvement in the financial industry has arisen. In this way, one of the  biggest threats faces by commercial banks is the risk prediction of credit clients. The  goal is to predict the probability of credit default based on credit card owner's characteristics and payment history.This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.
