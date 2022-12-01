@@ -70,7 +70,7 @@ pip install -r requirements.txt
 <code><img height="30" src="https://www.pngitem.com/pimgs/m/31-310639_pytorch-logo-png-transparent-png.png"></code>
 <code><img height="30" src="https://icon2.cleanpng.com/20180802/iwp/kisspng-flask-by-example-python-web-framework-bottle-lico-softwares-websites-press-services-product-5b634c8e416770.5741331515332343182679.jpg"></code>
 
-[<img target="_blank" src="https://www.bing.com/images/search?view=detailV2&ccid=l3h2m6io&id=984CEF92132DF41DEEEBBFB8E36C45F1387E9427&thid=OIP.l3h2m6ioYr67FT-7t2la0gHaC9&mediaurl=https%3a%2f%2fcdn.lawrencemcdaniel.com%2fwp-content%2fuploads%2f2020%2f05%2f31133826%2fnumpy-logo.png&exph=306&expw=765&q=NumPy+logo&simid=608041484012182817&FORM=IRPRST&ck=2C286F5B7D5CFD356AD9A636A99C11AD&selectedIndex=0&idpp=overlayview&ajaxhist=0&ajaxserp=0" width=100>](https://numpy.org)  
+[<img target="_blank" src="https://github.com/valohai/ml-logos/blob/master/numpy.svg" width=100>](https://numpy.org)  
 [<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/450px-Pandas_logo.svg.png" width=150>](https://pandas.pydata.org) [<img target="_blank" src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=150>](https://scikit-learn.org/stable)
 [<img target="_blank" src="https://www.statsmodels.org/stable/_images/statsmodels-logo-v2-horizontal.svg" width=170>](https://www.statsmodels.org)
 
