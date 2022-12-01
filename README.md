@@ -4,7 +4,6 @@
  http://ec2-3-112-54-158.ap-northeast-1.compute.amazonaws.com:8080/
  before use this we have to connect PuTTY with our aws instance then after this link works.
  
-# Hereku Cloud Deployment Application User Interface:
 
 ##  Dataset Overview
 Financial threats are displaying a trend about the credit risk of commercial banks as the  incredible improvement in the financial industry has arisen. In this way, one of the  biggest threats faces by commercial banks is the risk prediction of credit clients. The  goal is to predict the probability of credit default based on credit card owner's characteristics and payment history.This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.
@@ -38,8 +37,14 @@ pip install -r requirements.txt
 ```
 ## Directory Tree 
 ```
-├── templates 
+├──static
+│   └── indexstyle.css
+│   └── style1.css
+├── templates
+│   └── home.html
 │   └── index.html
+│   └── default.html
+│   └── non_default.html
 ├── app.py
 ├── credit-card-default.csv
 ├── credit_default_prediction.py
