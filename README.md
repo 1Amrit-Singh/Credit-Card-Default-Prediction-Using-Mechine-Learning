@@ -46,20 +46,21 @@ pip install -r requirements.txt
 │   └── default.html
 │   └── non_default.html
 ├── app.py
-├── credit-card-default.csv
+├── Credit_Card_Default_Prediction.ipynb
+├── UCI_Credit_Card.csv
 ├── credit_default_prediction.py
 ├── model.pkl
 ├── Procfile
 ├── README.md
 ├── HLD document
 ├── LLD Document
-├── Detailed Description Presentation
-├── log file
+├── Credit card Default ppt.pptx
+├── Detailed Project Report.pptx
+├── mylog.log file
 ├── wireframe pdf
 ├── README.md
 └── requirements.txt
 ```
-
 ## Technologies Used
 
 ![](https://forthebadge.com/images/badges/made-with-python.svg)
