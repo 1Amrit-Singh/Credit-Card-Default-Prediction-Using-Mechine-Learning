@@ -2,7 +2,7 @@
  Internship for Ineuron
 # AWS Cloud Deployment Application User Interface:
  http://ec2-3-112-54-158.ap-northeast-1.compute.amazonaws.com:8080/
- before use this we have to connect PuTTY with our aws instance then after this link works.
+ 
  
 
 ##  Dataset Overview
